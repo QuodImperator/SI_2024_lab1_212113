@@ -1,0 +1,159 @@
+PS C:\WINDOWS\system32> git remote add origin
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\WINDOWS\system32> cd C:\Random\SI_2024_lab1_212113
+PS C:\Random\SI_2024_lab1_212113> git init
+Initialized empty Git repository in C:/Random/SI_2024_lab1_212113/.git/
+PS C:\Random\SI_2024_lab1_212113> git remote add origin https://github.com/QuodImperator/SI_2024_lab1_212113
+PS C:\Random\SI_2024_lab1_212113> git push --all origin
+info: please complete authentication in your browser...
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch.
+Everything up-to-date
+PS C:\Random\SI_2024_lab1_212113> git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/QuodImperator/SI_2024_lab1_212113'
+PS C:\Random\SI_2024_lab1_212113> git remote
+origin
+PS C:\Random\SI_2024_lab1_212113> git remote -v
+origin  https://github.com/QuodImperator/SI_2024_lab1_212113 (fetch)
+origin  https://github.com/QuodImperator/SI_2024_lab1_212113 (push)
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS C:\Random\SI_2024_lab1_212113> git add README.md
+fatal: pathspec 'README.md' did not match any files
+PS C:\Random\SI_2024_lab1_212113> notepad README.md
+PS C:\Random\SI_2024_lab1_212113> add README.md
+add : The term 'add' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ add README.md
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (add:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Random\SI_2024_lab1_212113> git add README.md
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+PS C:\Random\SI_2024_lab1_212113> git commit
+[master (root-commit) e586f3d] Added README.md file!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Random\SI_2024_lab1_212113> git add SILab1Main.java
+fatal: pathspec 'SILab1Main.java' did not match any files
+PS C:\Random\SI_2024_lab1_212113> cd C:\Users\Darko\Downloads
+PS C:\Users\Darko\Downloads> git add SILabMain.java
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Darko\Downloads> cd C:\Random\SI_2024_lab1_212113
+PS C:\Random\SI_2024_lab1_212113> git add SILabMain.java
+fatal: pathspec 'SILabMain.java' did not match any files
+PS C:\Random\SI_2024_lab1_212113> git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+PS C:\Random\SI_2024_lab1_212113> git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+PS C:\Random\SI_2024_lab1_212113> git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+PS C:\Random\SI_2024_lab1_212113> git commit
+[master 8f86a5a] Add starter code.
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+PS C:\Random\SI_2024_lab1_212113> git push --all origin master
+fatal: --all can't be combined with refspecs
+PS C:\Random\SI_2024_lab1_212113> git push -all origin master
+error: did you mean `--all` (with two dashes)?
+PS C:\Random\SI_2024_lab1_212113> git push -all origin
+error: did you mean `--all` (with two dashes)?
+PS C:\Random\SI_2024_lab1_212113> git push --all origin
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.14 KiB | 1.14 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/QuodImperator/SI_2024_lab1_212113
+ * [new branch]      master -> master
+PS C:\Random\SI_2024_lab1_212113> git push SILab1_1
+fatal: 'SILab1_1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Random\SI_2024_lab1_212113> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Random\SI_2024_lab1_212113> git push SILab1_1 origin
+error: src refspec origin does not match any
+error: failed to push some refs to 'SILab1_1'
+PS C:\Random\SI_2024_lab1_212113> git push --all origin
+Everything up-to-date
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+        modified:   SILab1_2.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Random\SI_2024_lab1_212113> git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1_1.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_2.java
+
+PS C:\Random\SI_2024_lab1_212113> git commit
+[master dcc0c4b] Fixed the class so it works properly.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Random\SI_2024_lab1_212113> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_2.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Random\SI_2024_lab1_212113> git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+PS C:\Random\SI_2024_lab1_212113> git commit
+[master 7c0a736] Fixed yet another class.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Random\SI_2024_lab1_212113> git push --all origin
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 677 bytes | 677.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/QuodImperator/SI_2024_lab1_212113
+   8f86a5a..7c0a736  master -> master
+PS C:\Random\SI_2024_lab1_212113>

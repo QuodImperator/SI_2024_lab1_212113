@@ -1,0 +1,27 @@
+4. 
+- cd C:\Random\SI_2024_lab1_212113
+- git init
+5. 
+- git remote add origin https://github.com/QuodImperator/SI_2024_lab1_212113
+6.
+- (kreiran readme)
+- git add README.md
+- git commit (Added README.md file!)
+7.
+- git add SILab1Main.java
+- git add SILab1_1.java
+- git add SILab1_2.java
+- git commit (Add starter code.)
+8.
+- git push --all origin
+- (izmenet kodot vo klasite)
+- git add SILab1_1.java
+- git commit (Fixed the class so it works properly)
+- git add SILab1_2.java
+- git commit (Fixed yet another class)
+
+git init - креирање на празно репо
+git remote add origin https://github.com/QuodImperator/SI_2024_lab1_212113 - поврзување со remote репо
+git add - stage-ирај фајл
+git commit - сними ги измените на репото
+git push --all origin - синхронизација со remote репото
